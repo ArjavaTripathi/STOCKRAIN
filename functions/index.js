@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 
 admin.initializeApp();  //Create function to figure out which time to use! 
 
-
+const firestore = admin.firestore();
 
 exports.buy = functions.https.onRequest((req, res) => {
   var buyer = req.headers['x-forwarded-for'];          //All needed variables
@@ -58,6 +58,10 @@ exports.sell = functions.https.onRequest((req, res) => {
     var clientIp = req.headers['x-forwarded-for'];
     let company = req.query.company;
     let stocks = req.query.stocks;
+    var price;
+    var balance; 
+    var ownedStocks; 
+    var nStocks; 
     if (ownedStocks >= nStocks) {
 
 
@@ -78,7 +82,7 @@ exports.sell = functions.https.onRequest((req, res) => {
 
 
 exports.profile = functions.https.onRequest((req, res) => {
-  clientIp = req.headers['x-forwarded-for']
+  let clientIp = req.headers['x-forwarded-for']
   //cannot work on this till profile dabase is made. This will get the values of all stocks and from which companies the guy owns.
 
 })
