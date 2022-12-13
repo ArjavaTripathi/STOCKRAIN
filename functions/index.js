@@ -15,11 +15,11 @@ exports.buy = functions.https.onRequest((req, res) => {
   var price = 0;
   const stocksRef = admin.firestore().collection("Stocks");
   const industryRef = stocksRef.collection(industry);
-  const companyref = IndustryRef.collection(company);
-  const StockRate = companyref = companyref.doc("StockRates");
+  const companyref = industryRef.collection(company);
+  const StockRate  = companyref.doc("StockRates");
   let time_period = 0;
   const pricePeriodRef = firestore.collection("Stocks").doc("PricePeriod");
-  var balance, freeStocks, price;
+  var balance, freeStocks
 
   
   pricePeriodRef.get().then(doc => {     //Reads what time period it is 
