@@ -1,5 +1,5 @@
-import axios from "axios";
+import firebase from "firebase";
 
-const key = "ce9jcuaad3i831oorotgce9jcuaad3i831oorou0";
+const key = "bv1uf4v48v6o5ed6h88g";
 
 export { key };

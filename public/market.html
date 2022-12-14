@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scroll Website</title>
+    <title>Market</title>
     <link rel="stylesheet" href="market.css" />
     <link
       rel="stylesheet"
@@ -16,7 +18,7 @@
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="#home" id="navbar__logo">Stockrain</a>
+        <a href="#home" id="navbar__logo">StockRain</a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span> <span class="bar"></span>
           <span class="bar"></span>
@@ -45,57 +47,112 @@
       <div class="hero__container">
         <h1 class="hero__heading">Choose your <span>Industry</span></h1>
         <a href="#services">
-          <button class="btn_1">Automobiles</button>
+          <button class="btn_1" onclick="updateOptions()">Automobiles</button>
         </a>
         <a href="#services">
-          <button class="btn_2">Retail </button>
+          <button class="btn_2" onclick="updateOptions1()">Retail </button>
         </a>
         <a href="#services">
-          <button class="btn_3">Food </button>
+          <button class="btn_3" onclick="updateOptions2()">Food </button>
         </a>
         <a href="#services">
-          <button class="btn_4">Pharmacueticals </button>
-        </a>
-        
-          
+          <button class="btn_4" onclick="updateOptions3()">Pharmacueticals </button>
+        </a> 
         </div>
-
       </div>
+      
 
+      <script>
+        function updateOptions() {
+          // Get the select element
+          var select = document.getElementById("mySelect");
+        
+          // Clear the existing options
+          select.options.length = 0;
+        
+          // Add new options
+          select.options.add(new Option("BMW"));
+          select.options.add(new Option("Tesla"));
+          select.options.add(new Option("GM"));
+          select.options.add(new Option("Mercedes"));
+          select.options.add(new Option("Tata Motors"));
+        }
+        </script>
+
+<script>
+  function updateOptions1() {
+    // Get the select element
+    var select = document.getElementById("mySelect");
+  
+    // Clear the existing options
+    select.options.length = 0;
+  
+    // Add new options
+    select.options.add(new Option("DMart"));
+    select.options.add(new Option("Ikea"));
+    select.options.add(new Option("Best Buy"));
+    select.options.add(new Option("Home Depot"));
+    select.options.add(new Option("Target"));
+  }
+  </script>
+
+<script>
+  function updateOptions2() {
+    // Get the select element
+    var select = document.getElementById("mySelect");
+  
+    // Clear the existing options
+    select.options.length = 0;
+  
+    // Add new options
+    select.options.add(new Option("Pepsi"));
+    select.options.add(new Option("Mcdonalds"));
+    select.options.add(new Option("Nestle"));
+    select.options.add(new Option("Britannia"));
+    select.options.add(new Option("Starbucks"));
+  }
+  </script>
+
+<script>
+  function updateOptions3() {
+    // Get the select element
+    var select = document.getElementById("mySelect");
+  
+    // Clear the existing options
+    select.options.length = 0;
+  
+    // Add new options
+    select.options.add(new Option("Cipla"));
+    select.options.add(new Option("Dr. Reddys"));
+    select.options.add(new Option("Pfizer"));
+    select.options.add(new Option("BioNtech"));
+    select.options.add(new Option("Sun Pharma"));
+  }
+  </script>
+      
       <div class="services" id="services">
         <div class="services__container">
-          <div class="dropdown">
-            <button class="dropbtn">Companies</button>
-          <div class="dropdown-content">
-            <a>BMW</a>
-            <a>Mercedes</a>
-            <a>Tesla</a>
-            <a>General Motors</a>
-            <a>Ford</a>
-          </div>
-          <button class="btn_5">Buy </button>
-        <button class="btn_6">Sell</button>
-        </div>
-      </div>
+          <select id="mySelect" class="drop_down" onchange="choosePotion()">
+            <div class="dropdown-content">
+            <option>Select Industry</option>
+          </select>
+            </div>
+          </select>
+          <form>
+            <input type="text" id="myTextBox" name="myTextBox" class="txtbox" placeholder="Input Amount"><br><br>
+            <span1 id="stockprice">  </span1>
+            <h1 class="Information"> Current <span1>stock price: $100.34</span1></h1>
+            <h1 class="Information1"> Current <span1>stock volume: 5647 </span1></h1> 
+            <h1 class="Information2"> Your <span1>stock amount: 200</span1></h1>
+            <button class="btn_5" id="result" type="submit" onclick="storeValue()">Buy </button>
+          <button class="btn_6" type="submit" onclick="storeValue()">Sell</button>
+          </form>
+
     <script src="app.js"></script>
     <script src="market.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="header.js"></script>
+  <script src="firebase.js"></script>
   </body>
 </html>
-
-<!-- <div class="dropdown">
-  <div class="select">
-    <span class="selected">Companies</span>>
-    <div class="caret"></div>
-  </div>
-  <ul class="menu">
-    <li>BMW</li>
-    <li>Mercedes</li>
-    <li>General Motors</li>
-    <li>Ford</li>
-    <li class="active">Companies</li>
-    <li>Tesla</li>
-    </ul>
-  </div>

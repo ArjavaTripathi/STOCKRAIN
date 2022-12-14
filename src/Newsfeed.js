@@ -28,7 +28,7 @@ function Newsfeed() {
       <div className="newsfeed__container">
         <div className="newsfeed__chart__section">
           <div className="newsfeed_price_asset">
-            <h1> $420,000.69</h1>
+            <h1> $10,000.00</h1>
             <p> $142.90 (-0,12) Today </p>
           </div>
           <div className="newsfeed__chart">
@@ -38,17 +38,17 @@ function Newsfeed() {
         </div>
         <div className="newsfeed__buying__section">
           <h2> Buying Power</h2>
-          <h2> $4.11</h2>
+          <h2> $10,000</h2>
         </div>
         <div className="newsfeed__market__section">
           <div className="newsfeed__market__box">
-            <p> Markets Open!</p>
-            <h1> GoodLuck!!</h1>
+            <p> Markets Closed</p>
+            <h1> Take a break!</h1>
           </div>
         </div>
         <div className="newsfeed__popularlists__section">
           <div className="newsfeed__popularlists__intro">
-            <h1>Popular lists</h1>
+            <h1>Industries</h1>
             <p>Show More</p>
           </div>
           <div className="newsfeed_popularlists_badges">
