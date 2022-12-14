@@ -18,4 +18,4 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = app.firestore();
 
 // Export the Firebase app instance and the Firestore database instance
-export { db };
+export { db, firebaseConfig};
