@@ -1,0 +1,61 @@
+/*const cred = {
+    "type": "service_account",
+    "project_id": "stockrain-3d18d",
+    "private_key_id": "dfda221e3e629143478bac01b58ccda6ecc5bdd9",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCQgWxKsr7MYupw\nKJPPJmf2vzWYtC66w1SxSO3PMfSmw9aY7wuoBuFgDMd4wyG73FfsYk1dtfkygulN\n2NerV/Vm+xPI7JZhMrSZBu/DKOfroIRN/pQU3AMS5QJ8rK014IJDP5irkzeQJOrR\nXr2vAVypleZeaFm+ARsHe6VkVEfYh+dvvmPhfsfmYJMQWTCWc3oBtIay2x3l9pPO\nGcPsb+VnYSeeN12yqncYvAjBnDNR0tTEdGWlDITyg4k0BJObpCwbbmKTMLrJJrVR\nVNarK0j84iQMoeFUEOd0Aj3OM99sNbPEOEpdTEDQbbSL0poBAzU9eNd2cPBkzK2X\ngP7Nx0BBAgMBAAECggEAA+n7AAEUWJisaBk7w2tjSw5L2D73Ye3v7Jk8rnk4Usbk\nuGXHYnO9AZEYCyj5IDeWKrIRDZLz8PCle0MmiIq2ZA2keBODKVbeWBOdXXNFeJsD\ncWG+EtxwkX+6IfyK+J3UFmhl2R4YtfTvhqgs3eVU9EeR9sQ3m803rUu9t5xuKZ7e\nj/9nZT5zYmetOkuc1aD4uSigIAKJ4DDgPDD+CbHhsTVVRTWIM2kNWJ3BhkGNWID/\nJesIty0xvdgtIZbW0B3NbKQhwfJ7TKzoc1sAcspecbJC9lJVHmXtNEvN1te1U85h\n2c0ZaX4MQmZJqAn0PJmCccbw3q98Zf/AIInFSo54YQKBgQDC/Qubvpsqk2xWEMl7\nPZZR9OrBcLEq1yl2xUq1O/HG/asYxLMF0oPG7YMYNN3HxeWQ51SBPzemKkcHGYBM\nvKuK4/qFnV5Zq4/drIch0C7nDLBiyUyYwLgEgPgqkXXhp60I/wWaHmJIyFtUDuXy\nUg0vkxuBx8IqGdPkJJfdEXnDIQKBgQC9uJln5jIVACDSrqtSJQOYAdl0MEVSfgrc\n3/Zfi8mOc9/3IPgj+8lTAu4ts2x3m5RCxZq12kltkfa4J+yZ1rGPgi0iaYbKrafF\nD22JedBgN1z5kERQocxqzUoGc+4c6qmpScSyOXwIvceCxOsQnwMRRjQxg9pSHA/C\nB5Ptnwr5IQKBgQCavgr6XLfzf++YFdZv8Z5cCExNm8tePkbvtP7m+V2VGDcyfte8\nJSbjNha1nS7sncbjylIsCCl3u1GG9tv1Cj3xCaAFbbA05YxU1digIwE158ILg8k/\n6KGhIWDRF4M/w7v0yb5+YuKI9EhWW0RtnGROfyZzRj52/uxDwC6tCHNjQQKBgQCP\n19tv3CeSppM8SbSZRnkQEi7mGgclQW1JBAGPdbPu7sobXALnfWqqJqmhOs19bhcd\n/SaMxKExkx6lh5erGA1uCjvgQHQzTTDLhyP8vMARg0hZ61jwbYxIWbfLZrBdekoC\nkWyx2EXDduhCrLyw0G8J9NlzxU2NPbtw2D//RLuUIQKBgQCzkB95NTIbVvkqRGt4\nz0p51DzHff0yNXdWxGAqcBELtpfWW/RGsYew8Rv8EmpxJxUOL9eNK6qpSmcwqFgP\n+QS5ugdQNcX/689EUu9TkDnHIEhffjMjrSHFQFeXtfWRlIVLB3r+LNDsJQJqlI4B\nt65lY2+JNLVwXz9O2qyw2JrhIQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-4d22l@stockrain-3d18d.iam.gserviceaccount.com",
+    "client_id": "112875549536077061310",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-4d22l%40stockrain-3d18d.iam.gserviceaccount.com"
+  }
+
+
+
+admin.initializeApp({
+    credentials: cred,
+    databaseURL: "https://stockrain-3d18d-default-rtdb.asia-southeast1.firebasedatabase.app"
+});*/
+
+
+/*exports.testbuy = functions.https.onRequest(async (request, response) => {
+    try{
+        const stocks = firestore.collection("Stocks");
+        const docRef = stocks.doc("Automobile").collection("BMW").doc("StockRate").collection("Rates");
+        const doc = await docRef.get();
+        if (doc.exists) {
+            response.send(doc.data().rates[0])
+        }else {
+            console.error('Snapshot is undefined or null');
+            response.status(404).send("Not Found!")
+        }
+    }catch (err) {
+        console.error(err, 'Could not resolve');
+}
+});*/
+/*exports.testbuy = functions.https.onRequest(async (request, response) => {
+    try {
+        const stocks = firestore.collection('Stocks');
+        const docRef = stocks
+          .doc('Automobile')
+          .collection('BMW')
+          .doc('StockRate'); // Removed the `collection` call here
+    
+        const docSnapshot = await  docRef.get();
+    
+        if (docSnapshot.exists) {
+          const data = docSnapshot.data();
+          // Access the fields inside the StockRate document here
+          const field1 = data.rates[2];
+          const field2 = data.rates[1];
+    
+          response.send({ field1, field2 });
+        } else {
+          console.error('StockRate document does not exist');
+          response.status(404).send('Not Found!');
+        }
+      } catch (err) {
+        console.error(err, 'Could not resolve');
+      }
+});*/

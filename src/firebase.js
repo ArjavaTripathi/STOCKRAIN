@@ -1,4 +1,6 @@
 import firebase from "firebase";
+import "firebase/firestore";
+
 const firebaseConfig = {
     apiKey: "AIzaSyCFuet1rmeiKeUGbchc1BwgO1sbEbG0RUU",
 
@@ -14,6 +16,15 @@ const firebaseConfig = {
   
     appId: "1:651787294372:web:0e3217f15940aed3f2f831"
 };
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
+
+
+if(!firebaseConfig.apiKey) throw new Error("Missing API key");
+if(!firebaseConfig.authDomain) throw new Error("Missing auth domain");
+if(!firebaseConfig.projectId) throw new Error("Missing projectID");
+if(!firebaseConfig.storageBucket) throw new Error("Missing storage bucket");
+if(!firebaseConfig.messagingSenderId) throw new Error("Missing messaging sender");
+if(!firebaseConfig.appId) throw new Error("Missing appID"); 
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 export { db };
