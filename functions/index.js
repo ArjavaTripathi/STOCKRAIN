@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
-var serviceAccount = require("./serviceAccountKeys.json");
+var serviceAccount = require("./serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -21,9 +21,9 @@ exports.testbuy = functions.https.onRequest(async (request, response) => {
   try {
     const stocks = firestore.collection('Stocks');
     const docRef = stocks
-      .doc('Automobile')
+      .doc('Automobile ')
       .collection('BMW')
-      .doc('StockRate'); // Removed the `collection` call here
+      .doc('StockRates'); // Removed the `collection` call here
 
     const doc = await docRef.get();
 
