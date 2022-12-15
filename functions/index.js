@@ -38,7 +38,7 @@ exports.testbuy = functions.https.onRequest(async (request, response) => {
         if (!snapshot.empty) {
         console.log("Snapshot Found");
         console.log();
-        console.log(snapshot)
+        console.log("I can sleep happy tonight")
       } else {
         response.send("Not Found");
       }}); 
