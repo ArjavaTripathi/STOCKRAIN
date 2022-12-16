@@ -8,7 +8,8 @@ admin.initializeApp({
 });
 
 
-const firestore = admin.firestore();
+//const firestore = admin.firestore();
+const firestore = admin.firestore()
 
 exports.test = functions.https.onRequest((req, res) => {
   res.send("Hello from Firebase functions!");
@@ -21,19 +22,35 @@ exports.testbuy = functions.https.onRequest(async (request, response) => {
   try {
     const stocks = firestore.collection('Stocks');
     const docRef = stocks
-      .doc('Automobile ')
+      .doc('Automobiles ')
       .collection('BMW')
-      .doc('StockRates'); // Removed the `collection` call here
+      .doc('StockRates')
+      .get()
+        .then((snapshot) => {
+          if (!snapshot.empty) {
+    
+            console.log(snapshot.data());
+          } else {
+            response.send("Not Found");
+          }
+        })
 
-    const doc = await docRef.get();
 
-    console.log(doc)
 
-    if (doc.exists) {
-      console.log(doc.id, '=>', doc.data().rates[0]);
-    } else {
-      response.send("Not Found");
-    }
+
+
+    /*var ref = database.ref('/Stocks/Automobile /BMW/StockRates');
+
+    console.log("Ref is: ", ref)
+
+    ref.once("value")
+    .then( function(snapshot){
+      var name = snapshot.child("rates[0]").val(); 
+      console.log(name);
+    })*/
+ 
+
+
 
   } catch (err) {
     response.send("Could not resolve ", err.message);
