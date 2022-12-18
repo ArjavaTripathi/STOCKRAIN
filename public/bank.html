@@ -16,7 +16,7 @@
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="#home" id="navbar__logo">StockRain</a>
+        <a href="/" id="navbar__logo">StockRain</a>
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span> <span class="bar"></span>
           <span class="bar"></span>
@@ -40,13 +40,16 @@
       </div>
     </nav>
 
+
+<div>First Name:<br><span id="first-name"></span></div>
+
     <!-- Hero Section -->
     <div class="hero" id="home">
       <div class="hero__container">
         <h1 class="hero__heading">Welcome To <span>The Bank</span></h1>
-        <p class="hero__description">     </p>
         <p class="hero__description">Please proceed to the library to be granted loans</p>
-        <p class="hero__description">     </p>
+        <p class="hero__description"> data from prev page:   </p>
+        
         <p class="hero__description">     </p>
         <br> 
         <p class="hero__description">Caution: The Bank will freeze your assets if the money is not paid back</p>
@@ -86,6 +89,13 @@
         </div>
       </section>
     </div>
+
+
+    <script>
+
+      const firstname= localStorage.getItem(Number('first-name'));
+      document.getElementById('first-name').textContent= firstname;
+      </script>
 
     <script src="bank.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>

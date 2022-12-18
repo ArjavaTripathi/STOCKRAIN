@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scroll Website</title>
+  </head>
+
+<body>
+<h1>data from prev page:</h1>
+<div>First Name:<br><span id="first-name"></span></div>
+
+<script>
+const firstname= localStorage.getItem('first-name');
+
+document.getElementById('first-name').textContent= firstname;
+</script>
+
+</body>
+</html>

@@ -10,19 +10,7 @@ import TimeLine from './TimeLine'
 
 
 function Newsfeed() {
-  const [popularTopics, setTopics] = useState([
-    "Automobile",
-    "Retail",
-    "Pharmaceuticals",
-    "Food",
-   ]);
-
-  const [seed, setSeed] = useState("");
-
-  useEffect(() => {
-    setSeed(Math.floor(Math.random() * 5000));
-  }, []);
-
+  
   return (
     <div className="newsfeed">
       <div className="newsfeed__container">
@@ -46,26 +34,8 @@ function Newsfeed() {
             <h1> Take a break!</h1>
           </div>
         </div>
-        <div className="newsfeed__popularlists__section">
-          <div className="newsfeed__popularlists__intro">
-            <h1>Industries</h1>
-            <p>Show More</p>
-          </div>
-          <div className="newsfeed_popularlists_badges">
-            {popularTopics.map((topic) => (
-              <Chip 
-                className="topic__badge"
-                variant="outlined"
-                label={topic}
-                avatar={<Avatar
-                  src={`https://avatars.dicebear.com/api/human/${topic}.svg`}
-                />} 
-              />
-            ))}
           </div>
         </div>
-      </div>
-    </div>
   );
 }
 

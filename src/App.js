@@ -13,7 +13,7 @@ function App() {
       <div className="app__body">
         <div className="app__container">
         <NewsFeed />
-          <Stats />
+        <Stats/>
         </div>
       </div>
     </div>
