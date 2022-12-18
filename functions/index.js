@@ -30,6 +30,6 @@ exports.testbuy = functions.https.onRequest(async (request, response) => {
         return{data : "Nothing"}
     }
 }
-
-    console.log(readAllUsers)
+    const result = await readAllUsers();
+    console.log(result);
 })
