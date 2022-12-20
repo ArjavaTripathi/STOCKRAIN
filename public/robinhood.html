@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="robinhood.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black">
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="robinhood.html" id="navbar__logo">StockRain</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span> <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="robinhood.html" class="navbar__links" id="home-page">Portfolio</a>
+        </li>
+        <li class="navbar__item">
+          <a href="market.html" class="navbar__links" id="about-page">Market</a>
+        </li>
+        <li class="navbar__item">
+          <a href="bank.html" class="navbar__links" id="services-page"
+            >Bank</a
+          >
+          <li class="navbar__item">
+            <a href="news.html" class="navbar__links" id="news-page">News</a>
+          </li>
+        </li>
+        <li class="navbar__btn">
+          <a href="index.html" class="button" id="signup">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <h1 class="text-5xl p-8 text-green-400 font-bold">
+    Your Portfolio
+  </h1>
+  <br>
+
+  <div class="grid gap-4 pl-6 grid-cols-3">
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-green-400 dark:border-teal-400">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">$ 18,083.54</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-black">Portfolio Value</p>
+    </div>
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-green-400 dark:border-emerald-400">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">$ 2,096.94</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-black">Bank Value</p>
+    </div>
+    </div>
+
+  <div class="overflow-x-auto p-8 relative shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <caption class="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+            Your Stocks
+            <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400"> List of the stocks</p>
+        </caption>
+        <thead class="text-xs text-black uppercase bg-gray-50 dark:bg-green-400 dark:text-black">
+            <tr>
+                <th scope="col" class="py-3 px-6">
+                    
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Current Price
+                </th>
+                <th scope="col" class="py-3 px-6">
+                    Shares Held
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   TSLA
+                </th>
+                <td class="py-4 px-6">
+                   734.03 
+                </td>
+                <td class="py-4 px-6">
+                    7
+                </td>
+            </a>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    WEN
+                </th>
+                <td class="py-4 px-6">
+                    42.0
+                </td>
+                <td class="py-4 px-6">
+                    3
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    SBUX
+                </th>
+                <td class="py-4 px-6">
+                    43.24
+                </td>
+                <td class="py-4 px-6">
+                    11
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                 TSLA
+              </th>
+              <td class="py-4 px-6">
+                 734.03 
+              </td>
+              <td class="py-4 px-6">
+                  7
+              </td>
+          </a>
+          </tr>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+               TSLA
+            </th>
+            <td class="py-4 px-6">
+               734.03 
+            </td>
+            <td class="py-4 px-6">
+                7
+            </td>
+        </a>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+          <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+             TSLA
+          </th>
+          <td class="py-4 px-6">
+             734.03 
+          </td>
+          <td class="py-4 px-6">
+              7
+          </td>
+      </a>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+           TSLA
+        </th>
+        <td class="py-4 px-6">
+           734.03 
+        </td>
+        <td class="py-4 px-6">
+            7
+        </td>
+    </a>
+    </tr>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+      <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+         TSLA
+      </th>
+      <td class="py-4 px-6">
+         734.03 
+      </td>
+      <td class="py-4 px-6">
+          7
+      </td>
+  </a>
+  </tr>
+  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+       TSLA
+    </th>
+    <td class="py-4 px-6">
+       734.03 
+    </td>
+    <td class="py-4 px-6">
+        7
+    </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+  <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+     TSLA
+  </th>
+  <td class="py-4 px-6">
+     734.03 
+  </td>
+  <td class="py-4 px-6">
+      7
+  </td>
+</a>
+</tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

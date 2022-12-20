@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import firebase from "firebase/app";
 
+// Use your config values here.
+firebase.initializeApp({
+  apiKey: "AIzaSyCFuet1rmeiKeUGbchc1BwgO1sbEbG0RUU",
+
+    authDomain: "stockrain-3d18d.firebaseapp.com",
+
+    databaseURL: "https://stockrain-3d18d-default-rtdb.asia-southeast1.firebasedatabase.app/",
+
+    projectId: "stockrain-3d18d",
+
+    storageBucket: "stockrain-3d18d.appspot.com",
+
+    messagingSenderId: "651787294372",
+
+    appId: "1:651787294372:web:0e3217f15940aed3f2f831"
+});
+
+const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

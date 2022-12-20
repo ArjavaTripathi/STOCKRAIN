@@ -1,23 +1,15 @@
-import "./App.css";
-import Header from "./Header";
-import NewsFeed from "./Newsfeed";
-import Stats from "./Stats";
-import Signup from './signup.js';
+import React from "react";
+import firebase from "firebase";
 
-function App() {
+export default function App() {
+  const firebaseApp = firebase.apps[0];
   return (
-    <div className="app">
-      <div className="app__header">
-        <Header />
-      </div>
-      <div className="app__body">
-        <div className="app__container">
-        <NewsFeed />
-        <Stats/>
-        </div>
-      </div>
+    <div>
+      <h1>React & Firebase</h1>
+      <h2>By Shivshankar Hiteshkumar Arun</h2>
+      <code>
+        <pre>{JSON.stringify(firebaseApp.options, null, 2)}</pre>
+      </code>
     </div>
   );
 }
-
-export default App;

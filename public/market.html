@@ -21,30 +21,33 @@
   <body>
     <!-- Navbar Section -->
     <nav class="navbar">
-      <div class="navbar__container">
-        <a href="/" id="navbar__logo">StockRain</a>
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span> <span class="bar"></span>
-          <span class="bar"></span>
+        <div class="navbar__container">
+          <a href="robinhood.html" id="navbar__logo">StockRain</a>
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="robinhood.html" class="navbar__links" id="home-page">Portfolio</a>
+            </li>
+            <li class="navbar__item">
+              <a href="market.html" class="navbar__links" id="about-page">Market</a>
+            </li>
+            <li class="navbar__item">
+              <a href="bank.html" class="navbar__links" id="services-page"
+                >Bank</a
+              >
+              <li class="navbar__item">
+                <a href="news.html" class="navbar__links" id="news-page">News</a>
+              </li>
+            </li>
+            <li class="navbar__btn">
+              <a href="index.html" class="button" id="signup">Sign Up</a>
+            </li>
+          </ul>
         </div>
-        <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="/" class="navbar__links" id="home-page">Portfolio</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="about-page">Market</a>
-          </li>
-          <li class="navbar__item">
-            <a href="bank.html" class="navbar__links" id="services-page"
-              >Bank</a
-            >
-          </li>
-          <li class="navbar__btn">
-            <a href="#sign-up" class="button" id="signup">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
 
     <!-- Hero Section -->
     <div class="hero" id="home">
@@ -197,9 +200,14 @@
           </div>
           </select>
           <form id="form">
-            <input type="text" id="amt" class="txtbox" placeholder="Input Amount"><br><br>
-            <button class="btn_5" type="submit">Buy</button>
-              <button class="btn_6" type="submit">Sell</button>
+            <input type="text" id="amt" class="txtbox" placeholder="Input Amount" required><br><br>
+            <a href="transuc.html">
+            <button class="btn_5" onclick="sendRequest1()">Buy</button>
+            </a>
+            <a href="transfail.html">
+              <button class="btn_6" type="submit" >Sell</button>
+              </a>
+              <button>Update Stock Price</button>
           </form>
             <h1 id="myParagraph" class="Information"> Current <span1>stock price:</span1></h1>
             <h1 id="myParagraph1" class="Information1"> Current <span1>stock volume: </span1></h1>
@@ -405,38 +413,29 @@
               // get the selected option
             });
         </script>
-
-
-
-         <script>
-        
-
-    const form= document.getElementById('form');
-    const firstName= document.getElementById('firstName');
-    const lastName= document.getElementById('lastName');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-    const firstNameValue= firstName.value;
-    const lastNameValue= lastName.value;
-
-    localStorage.setItem('first-name', firstNameValue);
-    localStorage.setItem('last-name', lastNameValue);
-
-    window.location.href = "next.html";
-  })
-  </script>
           
-          <span id="stock-price"></span>
+    <!--      <span id="stock-price"></span>
 
-    <script>
+  <script>
             const stockprice= localStorage.getItem('stock-price');
             document.getElementById('stock-price').textContent= stockprice;
             var num = parseInt(stockprice);
            
-     </script>
+     </script> -->
+<script>
+function sendRequest1() {
+  fetch('https://us-central1-stockrain-3d18d.cloudfunctions.net/indexValue', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(response => {
+    console.log(response);
+  });
+}
 
+var num=parseInt(response);
+</script>
     <script src="app.js"></script>
     <script src="market.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
