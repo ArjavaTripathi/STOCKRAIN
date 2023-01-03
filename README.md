@@ -1,15 +1,12 @@
 # Stock Market Simulator 
 
-This project is a stock market simulator aimed at helping people learn investing.
+This group project is a stock market simulator aimed at helping people learn investin for the StockRain event
 
-## Available Scripts
+## My Contribution
 
-In the project directory, you can run:
+Some of FrontEnd
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Mainly backend functions (functions/index.js)
 
 ## What Did I learn 
 
